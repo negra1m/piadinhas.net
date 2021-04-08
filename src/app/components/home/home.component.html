@@ -1,1 +1,13 @@
-<p>home works!</p>
+<div class="container">
+  <h1 [ngClass]="active ? 'active' : 'default'" >Piadinhas.NET</h1>
+  <div *ngIf="active" class="box">
+    <p>
+      {{ piadinha.setup }}
+    </p>
+    <br />
+    <p>
+      {{piadinha.delivery}}
+    </p>
+  </div>
+  <button (click)="gerarPiada()">{{buttonText}} Piadinha</button>
+</div>
